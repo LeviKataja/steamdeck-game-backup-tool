@@ -1,0 +1,11 @@
+[Unit]
+Description=Backup Service for SteamOS
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python /home/deck/.local/bin/backup_service.py
+Restart=always
+User=deck
+
+[Install]
+WantedBy=multi-user.target
